@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Editor Portfolio - SamiyArt</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- EmailJS Script - MUST be loaded before your script.js -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            // Initialize EmailJS as soon as script loads
+            emailjs.init({
+                publicKey: "b1lY8hh-8_W3uINUE",
+            });
+            console.log("✅ EmailJS initialized in head");
+        })();
+    </script>
+
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
+    <!-- Floating Background Orbs -->
+    <div class="floating-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-pill">
+            <div class="logo">
+                <img src="image/logo2.png" width="40px" alt="Samiyart Logo" class="logo-image">
+                <span>SAMIYART</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="#contact" class="nav-login">Contact</a>
+                <a href="#portfolio" class="nav-signup">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+        <section id="home" class="hero">
+            <!-- Background Video (Behind Everything) -->
+            <video class="hero-video-bg" autoplay muted loop playsinline>
+                <source src="videos/web1.mp4" type="video/mp4">
+            </video>
+
+            <!-- Dark Overlay -->
+            <div class="hero-overlay"></div>
+
+            <!-- Centered Content -->
+            <div class="container">
+                <div class="hero-content-centered">
+                    <h1 class="hero-title">
+                        <span class="reveal-text">Next Level</span>
+                        <span class="reveal-text gradient-text">Amazing</span>
+                        <span class="reveal-text">Video Editor</span>
+                    </h1>
+                    <p class="hero-subtitle reveal-text">Creating cinematic stories that captivate and inspire audiences worldwide</p>
+                    <div class="hero-buttons reveal-text">
+                        <a href="#portfolio" class="btn-primary">Learn More</button></a>
+                        <button class="btn-play">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                                <path d="M10 8L16 12L10 16V8Z" fill="currentColor"/>
+                            </svg>
+                            <span><a href="#about">Reel</a></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">Supporting Digital Business</p>
+                <p class="section-subtitle">Branding Agencies</p>
+                <p class="section-subtitle">Private Documentaries</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="bi bi-camera-reels" style="font-size: 30px" center></i>
+                    </div>
+                    <h3>Video Editing</h3>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="bi bi-music-note-list" style="font-size: 30px;"></i>
+                    </div>
+                    <h3>Sound Effect</h3>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="bi bi-eyedropper" style="font-size: 30px;"></i>
+                    </div>
+                    <h3>Colour Grading</h3>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="bi bi-stars" style="font-size: 30px;"></i>
+                    </div>
+                    <h3>Branding</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="video-background">
+                    <!-- Updated image path to local directory -->
+                    <video src="videos/From KlickPin CF before and after _ Easy video editing Editing skills Premiere pro tutorials.mp4" autoplay muted loop controls width ="400" style="border-radius: 30px;" alt="Video Editor at Work">
+                </div>
+                <div class="about-text">
+                    <p class="section-label">About Us</p>
+                    <h2 class="section-title">We Always Make The Best</h2>
+                    <p class="about-description">
+                        With over a decade of experience in video production and editing, we transform raw footage into compelling visual stories. Our team combines technical expertise with creative vision to deliver content that resonates with your audience and exceeds expectations.
+                    </p>
+                    <p class="about-description">
+                        From corporate videos to documentaries, commercials to social media content, we handle every project with the same level of dedication and attention to detail. Your story deserves to be told beautifully.
+                    </p>
+                    <a href="#contact" class="btn-primary">Contact Us</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="portfolio-header">
+                <p class="section-label">Our Portfolio</p>
+                <h2 class="section-title">Latest Work</h2>
+            </div>
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="Commercials">Commercials</button>
+                <button class="filter-btn" data-filter="documentary">documentary</button>
+                <button class="filter-btn" data-filter="Youtube">Youtube</button>
+                <button class="filter-btn" data-filter="Shorts">Shorts</button>
+            </div>
+            <div class="portfolio-grid">
+                                <!-- Item 1 -->
+                <div class="portfolio-item" data-category="Commercials">
+                    <video class="portfolio-video" muted loop preload="metadata" poster="image/comvideo1.png" data-full-video-id="https://drive.google.com/drive/folders/1aNobZoUb98RQcBahmkFrFEspcGsocR23?usp=sharing">
+                        <source src="videos/comvideo1.mp4" type="video/mp4">
+                    </video>
+                    <div class="portfolio-overlay">
+                        <button class="play-btn"> 
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                <circle cx="24" cy="24" r="24" fill="rgba(255,255,255,0.2)"/>
+                                <path d="M20 16L32 24L20 32V16Z" fill="white"/>
+                            </svg>
+                        </button>
+                        <div class="portfolio-info">
+                            <h3>Social Media Marketing</h3>
+                            <p>Crafted with dynamic visuals and smooth transitions.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Item 2 -->
+                <div class="portfolio-item" data-category="documentary">
+                    <video class="portfolio-video" muted loop preload="metadata" poster="image/docvideo1.webp" data-full-video-id="https://drive.google.com/drive/folders/1qmirbP7707Xa0lhWmdj3mH1HBSujOo5o?usp=sharing">
+                        <source src="videos/docvideo1.mp4" type="video/mp4">
+                    </video>
+                    <div class="portfolio-overlay">
+                        <button class="play-btn">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                <circle cx="24" cy="24" r="24" fill="rgba(255,255,255,0.2)"/>
+                                <path d="M20 16L32 24L20 32V16Z" fill="white"/>
+                            </svg>
+                        </button>
+                        <div class="portfolio-info">
+                            <h3>CashCow Video</h3>
+                            <p>I made this for a YouTube video editing agency.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                 <div class="portfolio-item" data-category="Youtube">
+                    <video class="portfolio-video" muted loop preload="metadata" poster="image/ytvideo1.png" data-full-video-id="https://www.youtube.com/watch?v=UhAbqWe9Sw0&t=835s">
+                        <source src="videos/ytvideo1.mp4" type="video/mp4">
+                    </video>
+                    <div class="portfolio-overlay">
+                        <button class="play-btn">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                <circle cx="24" cy="24" r="24" fill="rgba(255,255,255,0.2)"/>
+                                <path d="M20 16L32 24L20 32V16Z" fill="white"/>
+                            </svg>
+                        </button>
+                        <div class="portfolio-info">
+                            <h3>Youtube Video</h3>
+                            <p>This is my own Youtube channel video.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="portfolio-item" data-category="Commercials">
+                    <video class="portfolio-video" muted loop preload="metadata" poster="" data-full-video-id="https://drive.google.com/drive/folders/1bvU62Z1VdM_plzCoR51vMxw7BKsTuT86?usp=sharing">
+                        <source src="videos/comvideo2.mp4" type="video/mp4">
+                    </video>
+                    <div class="portfolio-overlay">
+                        <button class="play-btn">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                <circle cx="24" cy="24" r="24" fill="rgba(255,255,255,0.2)"/>
+                                <path d="M20 16L32 24L20 32V16Z" fill="white"/>
+                            </svg>
+                        </button>
+                        <div class="portfolio-info">
+                            <h3>Commercials</h3>
+                            <p>I created this fast-cut edit for my Fiverr client.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="portfolio-item" data-category="Youtube">
+                    <video class="portfolio-video" muted loop preload="metadata" poster="image/ytvideo2.png" data-full-video-id="https://drive.google.com/drive/folders/1iI-GcmKepItRiijAcvErLTRfU_CTjjPH?usp=sharing">
+                        <source src="videos/ytvideo2.mp4" type="video/mp4">
+                    </video>
+                    <div class="portfolio-overlay">
+                        <button class="play-btn">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                <circle cx="24" cy="24" r="24" fill="rgba(255,255,255,0.2)"/>
+                                <path d="M20 16L32 24L20 32V16Z" fill="white"/>
+                            </svg>
+                        </button>
+                        <div class="portfolio-info">
+                            <h3>Youtube CashCow</h3>
+                            <p>YouTube cash cow video with rich motion graphics.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="portfolio-item" data-category="Shorts">
+                    <video class="portfolio-video" muted loop preload="metadata" poster="image/short1.jpg" data-full-video-id="https://drive.google.com/file/d/1AMcPhysOLumuf61cL0yBanlsCeGrXiG9/view?usp=sharing">
+                    </video>
+                    <div class="portfolio-overlay">
+                        <button class="play-btn">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                <circle cx="24" cy="24" r="24" fill="rgba(255,255,255,0.2)"/>
+                                <path d="M20 16L32 24L20 32V16Z" fill="white"/>
+                            </svg>
+                        </button>
+                        <div class="portfolio-info">
+                            <h3>Short Reel</h3>
+                            <p>I collaborate with a promotion agency to promote their brand.</p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="reviews">
+        <div class="container">
+            <div class="reviews-header">
+                <h2 class="section-title">About 340+ Positive Review</h2>
+                <div class="stars">
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                </div>
+            </div>
+            <div class="reviews-slider">
+                <div class="review-card active">
+                    <div class="review-avatar">
+                        <!-- Updated image path to local directory -->
+                        <img src="/image/person1.jpg" alt="Client">
+                    </div>
+                    <p class="review-text">"Absolutely phenomenal work! The team transformed our raw footage into a stunning promotional video that exceeded all expectations. Their attention to detail and creative vision is unmatched."</p>
+                    <h4 class="review-author">Sarah Johnson</h4>
+                    <p class="review-role">Marketing Director, TechCorp</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-avatar">
+                        <!-- Updated image path to local directory -->
+                        <img src="image/person3.jpg" alt="Client">
+                    </div>
+                    <p class="review-text">"Working with this team was an absolute pleasure. They understood our vision perfectly and delivered a final product that truly captured the essence of our brand. Highly recommended!"</p>
+                    <h4 class="review-author">Michael Chen</h4>
+                    <p class="review-role">CEO, Creative Studios</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-avatar">
+                        <!-- Updated image path to local directory -->
+                        <img src="image/person4.jpg" alt="Client">
+                    </div>
+                    <p class="review-text">"The level of professionalism and creativity is outstanding. They took our documentary project to the next level with their expert editing and storytelling skills."</p>
+                    <h4 class="review-author">Emily Rodriguez</h4>
+                    <p class="review-role">Producer, Documentary Films</p>
+                </div>
+            </div>
+            <div class="review-dots">
+                <button class="dot active" data-slide="0"></button>
+                <button class="dot" data-slide="1"></button>
+                <button class="dot" data-slide="2"></button>
+            </div>
+            <div class="floating-avatars">
+                <!-- Updated image paths to local directory -->
+                <img src="/image/person1.jpg" alt="Client" class="floating-avatar" style="top: 10%; left: 10%;">
+                <img src="/image/person2.jpg" alt="Client" class="floating-avatar" style="top: 20%; right: 15%;">
+                <img src="/image/person3.jpg" alt="Client" class="floating-avatar" style="bottom: 30%; left: 8%;">
+                <img src="/image/person4.jpg" alt="Client" class="floating-avatar" style="bottom: 15%; right: 10%;">
+                <img src="/image/person5.jpg" alt="Client" class="floating-avatar" style="top: 50%; left: 5%;">
+                <img src="/image/person6.jpg" alt="Client" class="floating-avatar" style="top: 60%; right: 8%;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2 class="section-title">Let's Create Something Amazing Together</h2>
+                    <p class="contact-description">Ready to bring your vision to life? Get in touch with us and let's discuss your next project.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M3 8L10.89 13.26C11.54 13.67 12.46 13.67 13.11 13.26L21 8M5 19H19C20.1 19 21 18.1 21 17V7C21 5.9 20.1 5 19 5H5C3.9 5 3 5.9 3 7V17C3 18.1 3.9 19 5 19Z" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            <span>samiyart543@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M3 5C3 3.89543 3.89543 3 5 3H8.27924C8.70967 3 9.09181 3.27543 9.22792 3.68377L10.7257 8.17721C10.8831 8.64932 10.6694 9.16531 10.2243 9.38787L7.96701 10.5165C9.06925 12.9612 11.0388 14.9308 13.4835 16.033L14.6121 13.7757C14.8347 13.3306 15.3507 13.1169 15.8228 13.2743L20.3162 14.7721C20.7246 14.9082 21 15.2903 21 15.7208V19C21 20.1046 20.1046 21 19 21H18C9.71573 21 3 14.2843 3 6V5Z" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            <span>+94 70 1494 689</span>
+                        </div>
+                        <div class="contact-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            <span>Colombo 05, Sri Lanka</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Subject">
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="image/logo2.png" width="40px" alt="Samiyart Logo" class="logo-image">
+                    <span>SAMIYART</span>
+                </div>
+                <p class="footer-text">© 2025 Samiyart Studio. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/16Weeu5VM2/" aria-label="Facebook">FB</a>
+                    <a href="https://www.fiverr.com/s/DBL0lDD" aria-label="Fiverr">Fr</a>
+                    <a href="#" aria-label="Twitter">TW</a>
+                    <a href="https://www.linkedin.com/in/samitha-bandara-97a536253?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" aria-label="LinkedIn">LI</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
