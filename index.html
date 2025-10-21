@@ -54,9 +54,29 @@
             <div class="nav-actions">
                 <a href="#contact" class="nav-login">Contact</a>
                 <a href="#portfolio" class="nav-signup">Get Started</a>
+                <!-- Mobile menu toggle -->
+                <button id="menuToggle" class="mobile-menu-btn" aria-label="Open menu">
+                    <i class="bi bi-list" aria-hidden="true" style="font-size: 22px;"></i>
+                </button>
             </div>
         </div>
     </nav>
+
+    <!-- Mobile Navigation Overlay -->
+    <div id="navOverlay" class="nav-overlay" aria-hidden="true">
+        <div class="nav-overlay-inner">
+            <button id="menuClose" class="nav-close" aria-label="Close menu">
+                <i class="bi bi-x-lg" aria-hidden="true"></i>
+            </button>
+            <ul class="nav-overlay-links">
+                <li><a class="nav-overlay-link" href="#home">Home</a></li>
+                <li><a class="nav-overlay-link" href="#about">About</a></li>
+                <li><a class="nav-overlay-link" href="#portfolio">Portfolio</a></li>
+                <li><a class="nav-overlay-link" href="#reviews">Reviews</a></li>
+                <li><a class="nav-overlay-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
 
     <!-- Hero Section -->
         <section id="home" class="hero">
@@ -78,14 +98,14 @@
                     </h1>
                     <p class="hero-subtitle reveal-text">Creating cinematic stories that captivate and inspire audiences worldwide</p>
                     <div class="hero-buttons reveal-text">
-                        <a href="#portfolio" class="btn-primary">Learn More</button></a>
-                        <button class="btn-play">
+                        <a href="#portfolio" class="btn-primary">Learn More</a>
+                        <a href="#about" class="btn-play">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
                                 <path d="M10 8L16 12L10 16V8Z" fill="currentColor"/>
                             </svg>
-                            <span><a href="#about">Reel</a></span>
-                        </button>
+                            <span>Reel</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -132,9 +152,9 @@
     <section id="about" class="about">
         <div class="container">
             <div class="about-content">
-                <div class="video-background">
-                    <!-- Updated image path to local directory -->
-                    <video src="videos/From KlickPin CF before and after _ Easy video editing Editing skills Premiere pro tutorials.mp4" autoplay muted loop controls width ="400" style="border-radius: 30px;" alt="Video Editor at Work">
+                <div class="about-image">
+                    <!-- Updated video wrapped for styling and closed properly -->
+                    <video src="videos/From KlickPin CF before and after _ Easy video editing Editing skills Premiere pro tutorials.mp4" autoplay muted loop controls width="400" style="border-radius: 20px;"></video>
                 </div>
                 <div class="about-text">
                     <p class="section-label">About Us</p>
@@ -145,7 +165,7 @@
                     <p class="about-description">
                         From corporate videos to documentaries, commercials to social media content, we handle every project with the same level of dedication and attention to detail. Your story deserves to be told beautifully.
                     </p>
-                    <a href="#contact" class="btn-primary">Contact Us</button></a>
+                    <a href="#contact" class="btn-primary">Contact Us</a>
                 </div>
             </div>
         </div>

@@ -343,17 +343,28 @@ console.log("EmailJS loaded:", typeof window.emailjs !== 'undefined')
 const mobileMenuBtn = document.querySelector(".mobile-menu-btn")
 const navLinks = document.querySelector(".nav-links")
 
-if (mobileMenuBtn && navLinks) {
+if (mobileMenuBtn) {
   mobileMenuBtn.addEventListener("click", () => {
-    navLinks.style.display = navLinks.style.display === "flex" ? "none" : "flex"
-    navLinks.style.position = "absolute"
-    navLinks.style.top = "100%"
-    navLinks.style.left = "0"
-    navLinks.style.right = "0"
-    navLinks.style.background = "var(--bg-dark)"
-    navLinks.style.flexDirection = "column"
-    navLinks.style.padding = "20px"
-    navLinks.style.gap = "20px"
+    // Prefer opening the full-screen overlay if available
+    const overlayEl = document.getElementById("navOverlay")
+    if (overlayEl) {
+      overlayEl.classList.add("active")
+      document.body.style.overflow = "hidden"
+      return
+    }
+
+    // Fallback: inline dropdown menu
+    if (navLinks) {
+      navLinks.style.display = navLinks.style.display === "flex" ? "none" : "flex"
+      navLinks.style.position = "absolute"
+      navLinks.style.top = "100%"
+      navLinks.style.left = "0"
+      navLinks.style.right = "0"
+      navLinks.style.background = "var(--bg-dark)"
+      navLinks.style.flexDirection = "column"
+      navLinks.style.padding = "20px"
+      navLinks.style.gap = "20px"
+    }
   })
 }
 
@@ -411,6 +422,16 @@ if (menuToggle && menuClose && navOverlay) {
   // Close menu with Escape key
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && navOverlay.classList.contains("active")) {
+      navOverlay.classList.remove("active")
+      document.body.style.overflow = "auto"
+    }
+  })
+
+  // Close when tapping outside the inner panel
+  navOverlay.addEventListener("click", (e) => {
+    const inner = document.querySelector('.nav-overlay-inner')
+    if (!inner) return
+    if (!inner.contains(e.target)) {
       navOverlay.classList.remove("active")
       document.body.style.overflow = "auto"
     }
